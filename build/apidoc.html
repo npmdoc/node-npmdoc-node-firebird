@@ -1,0 +1,2061 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/hgourvest/node-firebird"
+
+    >node-firebird (v0.8.1)</a>
+</h1>
+<h4>Pure JavaScript and Asynchronous Firebird client for Node.js.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-firebird">module node-firebird</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection">
+            function <span class="apidocSignatureSpan">node-firebird.</span>Connection
+            <span class="apidocSignatureSpan">(host, port, callback, options, db, svc)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.attach">
+            function <span class="apidocSignatureSpan">node-firebird.</span>attach
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.attachOrCreate">
+            function <span class="apidocSignatureSpan">node-firebird.</span>attachOrCreate
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.create">
+            function <span class="apidocSignatureSpan">node-firebird.</span>create
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.escape">
+            function <span class="apidocSignatureSpan">node-firebird.</span>escape
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.pool">
+            function <span class="apidocSignatureSpan">node-firebird.</span>pool
+            <span class="apidocSignatureSpan">(max, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-firebird.</span>Connection.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-firebird.</span>ISOLATION_READ_COMMITED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-firebird.</span>ISOLATION_READ_COMMITED_READ_ONLY</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-firebird.</span>ISOLATION_READ_UNCOMMITTED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-firebird.</span>ISOLATION_REPEATABLE_READ</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-firebird.</span>ISOLATION_SERIALIZABLE</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-firebird.Connection">module node-firebird.Connection</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.Connection">
+            function <span class="apidocSignatureSpan">node-firebird.</span>Connection
+            <span class="apidocSignatureSpan">(host, port, callback, options, db, svc)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-firebird.Connection.prototype">module node-firebird.Connection.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.prototype._bind_events">
+            function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>_bind_events
+            <span class="apidocSignatureSpan">(host, port, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.prototype._queueEvent">
+            function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>_queueEvent
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.prototype._setcachedquery">
+            function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>_setcachedquery
+            <span class="apidocSignatureSpan">(query, statement)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.prototype.allocateStatement">
+            function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>allocateStatement
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.prototype.attach">
+            function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>attach
+            <span class="apidocSignatureSpan">(options, callback, db)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.prototype.batchSegments">
+            function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>batchSegments
+            <span class="apidocSignatureSpan">(blob, buffer, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.prototype.closeBlob">
+            function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>closeBlob
+            <span class="apidocSignatureSpan">(blob, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.prototype.closeStatement">
+            function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>closeStatement
+            <span class="apidocSignatureSpan">(statement, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.prototype.commit">
+            function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>commit
+            <span class="apidocSignatureSpan">(transaction, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.prototype.commitRetaining">
+            function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>commitRetaining
+            <span class="apidocSignatureSpan">(transaction, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.prototype.connect">
+            function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>connect
+            <span class="apidocSignatureSpan">(database, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.prototype.createBlob2">
+            function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>createBlob2
+            <span class="apidocSignatureSpan">(transaction, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.prototype.createDatabase">
+            function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>createDatabase
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.prototype.detach">
+            function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>detach
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.prototype.disconnect">
+            function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>disconnect
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.prototype.dropStatement">
+            function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>dropStatement
+            <span class="apidocSignatureSpan">(statement, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.prototype.executeStatement">
+            function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>executeStatement
+            <span class="apidocSignatureSpan">(transaction, statement, params, callback, custom)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.prototype.fetch">
+            function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>fetch
+            <span class="apidocSignatureSpan">(statement, transaction, count, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.prototype.fetchAll">
+            function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>fetchAll
+            <span class="apidocSignatureSpan">(statement, transaction, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.prototype.getCachedQuery">
+            function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>getCachedQuery
+            <span class="apidocSignatureSpan">(query)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.prototype.getSegment">
+            function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>getSegment
+            <span class="apidocSignatureSpan">(blob, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.prototype.openBlob">
+            function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>openBlob
+            <span class="apidocSignatureSpan">(blob, transaction, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.prototype.prepareStatement">
+            function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>prepareStatement
+            <span class="apidocSignatureSpan">(transaction, statement, query, plan, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.prototype.rollback">
+            function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>rollback
+            <span class="apidocSignatureSpan">(transaction, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.prototype.rollbackRetaining">
+            function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>rollbackRetaining
+            <span class="apidocSignatureSpan">(transaction, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.prototype.startTransaction">
+            function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>startTransaction
+            <span class="apidocSignatureSpan">(isolation, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.prototype.svcattach">
+            function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>svcattach
+            <span class="apidocSignatureSpan">(options, callback, svc)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.prototype.svcdetach">
+            function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>svcdetach
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.prototype.svcquery">
+            function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>svcquery
+            <span class="apidocSignatureSpan">(spbquery, resultbuffersize, timeout, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.prototype.svcstart">
+            function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>svcstart
+            <span class="apidocSignatureSpan">(spbaction, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-firebird.Connection.prototype.throwClosed">
+            function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>throwClosed
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-firebird" id="apidoc.module.node-firebird">module node-firebird</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection" id="apidoc.element.node-firebird.Connection">
+        function <span class="apidocSignatureSpan">node-firebird.</span>Connection
+        <span class="apidocSignatureSpan">(host, port, callback, options, db, svc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Connection = function (host, port, callback, options, db, svc) {
+    var self = this;
+    this.db = db;
+    this.svc = svc
+    this._msg = new XdrWriter(32);
+    this._blr = new BlrWriter(32);
+    this._queue = [];
+    this._detachTimeout;
+    this._detachCallback;
+    this._detachAuto;
+    this._socket = net.createConnection(port, host);
+    this._pending = [];
+    this._isClosed = false;
+    this._isDetach = false;
+    this._isUsed = false;
+    this._pooled = options.isPool||false;
+    this.options = options;
+    this._bind_events(host, port, callback);
+    this.error;
+    this._max_cached_query = options.maxCachedQuery || -1;
+    this._cache_query = options.cacheQuery?{}:null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.attach" id="apidoc.element.node-firebird.attach">
+        function <span class="apidocSignatureSpan">node-firebird.</span>attach
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">attach = function (options, callback) {
+
+    var host = options.host || DEFAULT_HOST;
+    var port = options.port || DEFAULT_PORT;
+    var manager = options.manager || false;
+    var cnx = this.connection = new Connection(host, port, function(err) {
+
+        if (err) {
+            doError(err, callback);
+            return;
+        }
+
+        cnx.connect(options.database || options.filename, function(err) {
+            if (err) {
+                doError(err, callback);
+            } else {
+                if (manager)
+                    cnx.svcattach(options, callback);
+                else
+                    cnx.attach(options, callback);
+            }
+        });
+
+    }, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+var Firebird = require(&#x27;node-firebird&#x27;);
+```
+
+### Methods
+
+- `Firebird.escape(value) -&#x3e; return {String}` - prevent for SQL Injections
+- `Firebird.<span class="apidocCodeKeywordSpan">attach</span>(options, function(err, db))` attach a database
+- `Firebird.create(options, function(err, db))` create a database
+- `Firebird.attachOrCreate(options, function(err, db))` attach or create database
+- `Firebird.pool(max, options, function(err, db)) -&#x3e; return {Object}` create a connection pooling
+
+## Connection types
+
+### Connection options
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.attachOrCreate" id="apidoc.element.node-firebird.attachOrCreate">
+        function <span class="apidocSignatureSpan">node-firebird.</span>attachOrCreate
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">attachOrCreate = function (options, callback) {
+
+    var host = options.host || DEFAULT_HOST;
+    var port = options.port || DEFAULT_PORT;
+
+    var cnx = this.connection = new Connection(host, port, function(err) {
+
+        var self = cnx;
+
+        if (err) {
+            callback({ error: err, message: &#x22;Connect error&#x22; });
+            return;
+        }
+
+        cnx.connect(options.database || options.filename, function(err) {
+
+            if (err) {
+                doError(err, callback);
+                return;
+            }
+
+            cnx.attach(options, function(err, ret) {
+
+                if (!err) {
+                    if (self.db)
+                        self.db.emit(&#x27;connect&#x27;, ret);
+                    doCallback(ret, callback);
+                    return;
+                }
+
+                cnx.createDatabase(options, callback);
+            });
+        });
+
+    }, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+### Methods
+
+- `Firebird.escape(value) -&#x3e; return {String}` - prevent for SQL Injections
+- `Firebird.attach(options, function(err, db))` attach a database
+- `Firebird.create(options, function(err, db))` create a database
+- `Firebird.<span class="apidocCodeKeywordSpan">attachOrCreate</span>(options, function(err, db))` attach or create database
+- `Firebird.pool(max, options, function(err, db)) -&#x3e; return {Object}` create a connection pooling
+
+## Connection types
+
+### Connection options
+
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.create" id="apidoc.element.node-firebird.create">
+        function <span class="apidocSignatureSpan">node-firebird.</span>create
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (options, callback) {
+    var host = options.host || DEFAULT_HOST;
+    var port = options.port || DEFAULT_PORT;
+    var cnx = this.connection = new Connection(host, port, function(err) {
+        cnx.connect(options.database || options.filename, function(err) {
+
+            if (err) {
+                self.db.emit(&#x27;error&#x27;, err);
+                doError(err, callback);
+                return;
+            }
+
+            cnx.createDatabase(options, callback);
+        });
+    }, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var Firebird = require(&#x27;node-firebird&#x27;);
+```
+
+### Methods
+
+- `Firebird.escape(value) -&#x3e; return {String}` - prevent for SQL Injections
+- `Firebird.attach(options, function(err, db))` attach a database
+- `Firebird.<span class="apidocCodeKeywordSpan">create</span>(options, function(err, db))` create a database
+- `Firebird.attachOrCreate(options, function(err, db))` attach or create database
+- `Firebird.pool(max, options, function(err, db)) -&#x3e; return {Object}` create a connection pooling
+
+## Connection types
+
+### Connection options
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.escape" id="apidoc.element.node-firebird.escape">
+        function <span class="apidocSignatureSpan">node-firebird.</span>escape
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">escape = function (value) {
+
+    if (value === null || value === undefined)
+        return &#x27;NULL&#x27;;
+
+    switch (typeof(value)) {
+        case &#x27;boolean&#x27;:
+            return value ? &#x27;1&#x27; : &#x27;0&#x27;;
+        case &#x27;number&#x27;:
+            return value.toString();
+        case &#x27;string&#x27;:
+            return &#x22;&#x27;&#x22; + value.replace(/&#x27;/g, &#x22;&#x27;&#x27;&#x22;).replace(/\\/g, &#x27;\\\\&#x27;) + &#x22;&#x27;&#x22;;
+    }
+
+    if (value instanceof Date)
+        return &#x22;&#x27;&#x22; + value.getFullYear() + &#x27;-&#x27; + value.getMonth().toString().padLeft(2, &#x27;0&#x27;) + &#x27;-&#x27; + value.getDate().toString().
+padLeft(2, &#x27;0&#x27;) + &#x27; &#x27; + value.getHours().toString().padLeft(2, &#x27;0&#x27;) + &#x27;:&#x27; + value.getMinutes().toString().padLeft(2, &#x27;0&#x27;) + &#x27;:&#x27; +
+value.getSeconds().toString().padLeft(2, &#x27;0&#x27;) + &#x22;&#x27;&#x22;;
+
+    throw new Error(&#x27;Escape supports only primitive values.&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+var Firebird = require(&#x27;node-firebird&#x27;);
+```
+
+### Methods
+
+- `Firebird.<span class="apidocCodeKeywordSpan">escape</span>(value) -&#x3e; return {String}` - prevent for SQL Injections
+- `Firebird.attach(options, function(err, db))` attach a database
+- `Firebird.create(options, function(err, db))` create a database
+- `Firebird.attachOrCreate(options, function(err, db))` attach or create database
+- `Firebird.pool(max, options, function(err, db)) -&#x3e; return {Object}` create a connection pooling
+
+## Connection types
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.pool" id="apidoc.element.node-firebird.pool">
+        function <span class="apidocSignatureSpan">node-firebird.</span>pool
+        <span class="apidocSignatureSpan">(max, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pool = function (max, options, callback) {
+    var pool = new Pool(max, options);
+    options.isPool = true;
+    return pool;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### Methods
+
+- `Firebird.escape(value) -&#x3e; return {String}` - prevent for SQL Injections
+- `Firebird.attach(options, function(err, db))` attach a database
+- `Firebird.create(options, function(err, db))` create a database
+- `Firebird.attachOrCreate(options, function(err, db))` attach or create database
+- `Firebird.<span class="apidocCodeKeywordSpan">pool</span>(max, options, function(err, db)) -&#x3e; return {Object}` create a connection
+ pooling
+
+## Connection types
+
+### Connection options
+
+```js
+var options = {};
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-firebird.Connection" id="apidoc.module.node-firebird.Connection">module node-firebird.Connection</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.Connection" id="apidoc.element.node-firebird.Connection.Connection">
+        function <span class="apidocSignatureSpan">node-firebird.</span>Connection
+        <span class="apidocSignatureSpan">(host, port, callback, options, db, svc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Connection = function (host, port, callback, options, db, svc) {
+    var self = this;
+    this.db = db;
+    this.svc = svc
+    this._msg = new XdrWriter(32);
+    this._blr = new BlrWriter(32);
+    this._queue = [];
+    this._detachTimeout;
+    this._detachCallback;
+    this._detachAuto;
+    this._socket = net.createConnection(port, host);
+    this._pending = [];
+    this._isClosed = false;
+    this._isDetach = false;
+    this._isUsed = false;
+    this._pooled = options.isPool||false;
+    this.options = options;
+    this._bind_events(host, port, callback);
+    this.error;
+    this._max_cached_query = options.maxCachedQuery || -1;
+    this._cache_query = options.cacheQuery?{}:null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-firebird.Connection.prototype" id="apidoc.module.node-firebird.Connection.prototype">module node-firebird.Connection.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.prototype._bind_events" id="apidoc.element.node-firebird.Connection.prototype._bind_events">
+        function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>_bind_events
+        <span class="apidocSignatureSpan">(host, port, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_bind_events = function (host, port, callback) {
+
+    var self = this;
+
+    self._socket.on(&#x27;close&#x27;, function() {
+
+        self._isClosed = true;
+
+        if (self._isDetach)
+            return;
+
+        if (!self.db) {
+            if (callback)
+                callback(self.error);
+            return;
+        }
+
+        setImmediate(function() {
+
+            self._socket = null;
+            self._msg = null;
+            self._blr = null;
+
+            var ctx = new Connection(host, port, function(err) {
+                ctx.connect(self.options.filename, function(err) {
+
+                    if (err) {
+                        self.emit(&#x27;error&#x27;, err);
+                        return;
+                    }
+
+                    ctx.attach(self.options, function(err) {
+
+                        if (err) {
+                            self.emit(&#x27;error&#x27;, err);
+                            return;
+                        }
+
+                        ctx._queue = ctx._queue.concat(self._queue);
+                        ctx._pending = ctx._pending.concat(self._pending);
+                        self.db.emit(&#x27;reconnect&#x27;);
+
+                    }, self.db);
+                });
+
+            }, self.options, self.db);
+        });
+
+    });
+
+    self._socket.on(&#x27;error&#x27;, function(e) {
+
+        self.error = e;
+
+        if (self.db)
+            self.db.emit(&#x27;error&#x27;, e)
+
+        if (callback)
+            callback(e);
+
+    });
+
+    self._socket.on(&#x27;connect&#x27;, function() {
+        self._isClosed = false;
+        self._isOpened = true;
+        if (callback)
+            callback();
+    });
+
+    self._socket.on(&#x27;data&#x27;, function(data) {
+        var obj, cb, pos, xdr, buf;
+
+        if (!self._xdr) {
+            xdr = new XdrReader(data);
+        } else {
+            xdr = self._xdr;
+            delete(self._xdr);
+            buf = new Buffer(data.length + xdr.buffer.length);
+            xdr.buffer.copy(buf);
+            data.copy(buf, xdr.buffer.length);
+            xdr.buffer = buf;
+        }
+
+        while (xdr.pos &#x3c; xdr.buffer.length) {
+
+            pos = xdr.pos;
+
+            try {
+                cb = self._queue[0];
+                obj = decodeResponse(xdr, cb, self.db, self._lowercase_keys);
+                if (obj &#x26;&#x26; obj.error) {
+                    // packet is not complete
+                    xdr.buffer = xdr.buffer.slice(xdr.pos);
+                    xdr.pos = 0;
+                    self._xdr = xdr;
+                    return;
+                }
+                // remove the op flag, needed for partial packet
+                if (xdr.r) delete(xdr.r);
+
+            } catch(err) {
+                xdr.buffer = xdr.buffer = xdr.buffer.slice(pos);
+                xdr.pos = 0;
+                self._xdr = xdr;
+                return;
+            }
+
+            self._queue.shift();
+            self._pending.shift();
+
+            if (obj &#x26;&#x26; obj.status) {
+
+                messages.lookupMessages(obj.status, function(message) {
+                    obj.message = message;
+                    doCallback(obj, cb);
+                });
+
+            } else
+                doCallback(obj, cb);
+        }
+
+        if (!self._detachAuto || self._pending.length !== 0)
+            return;
+
+        clearTimeout(self._detachTimeout);
+        self._detachTimeout = setTimeout(function() {
+            self.db.detach(self._detachCallback);
+            self._detachAuto = false;
+        }, 100);
+
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.prototype._queueEvent" id="apidoc.element.node-firebird.Connection.prototype._queueEvent">
+        function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>_queueEvent
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_queueEvent = function (callback){
+    var self = this;
+
+    if (self._isClosed) {
+        if (callback)
+            callback(new Error(&#x27;Connection is closed.&#x27;));
+        return;
+    }
+
+    self._queue.push(callback);
+    self._socket.write(self._msg.getData());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.prototype._setcachedquery" id="apidoc.element.node-firebird.Connection.prototype._setcachedquery">
+        function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>_setcachedquery
+        <span class="apidocSignatureSpan">(query, statement)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_setcachedquery = function (query, statement) {
+    if (this._cache_query)
+        if (this._max_cached_query == -1 || this._max_cached_query &#x3e; Object.keys(this._cache_query).length)
+            this._cache_query[query] = statement;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.prototype.allocateStatement" id="apidoc.element.node-firebird.Connection.prototype.allocateStatement">
+        function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>allocateStatement
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">allocateStatement = function (callback) {
+
+    if (this._isClosed)
+        return this.throwClosed(callback);
+
+    // for auto detach
+    this._pending.push(&#x27;allocateStatement&#x27;);
+
+    var msg = this._msg;
+    msg.pos = 0;
+    msg.addInt(op_allocate_statement);
+    msg.addInt(this.dbhandle);
+    callback.response = new Statement(this);
+    this._queueEvent(callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.prototype.attach" id="apidoc.element.node-firebird.Connection.prototype.attach">
+        function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>attach
+        <span class="apidocSignatureSpan">(options, callback, db)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">attach = function (options, callback, db) {
+    this._lowercase_keys = options.lowercase_keys || DEFAULT_LOWERCASE_KEYS;
+    var database = options.database || options.filename;
+    var user = options.user || DEFAULT_USER;
+    var password = options.password || DEFAULT_PASSWORD;
+    var role = options.role;
+    var self = this;
+    var msg = this._msg;
+    var blr = this._blr;
+    msg.pos = 0;
+    blr.pos = 0;
+
+    blr.addByte(1);
+    blr.addString(isc_dpb_lc_ctype, &#x27;UTF8&#x27;, DEFAULT_ENCODING);
+    blr.addString(isc_dpb_user_name, user, DEFAULT_ENCODING);
+    blr.addString(isc_dpb_password, password, DEFAULT_ENCODING);
+
+    if (role)
+        blr.addString(isc_dpb_sql_role_name, role, DEFAULT_ENCODING);
+
+    msg.addInt(op_attach);
+    msg.addInt(0);  // Database Object ID
+    msg.addString(database, DEFAULT_ENCODING);
+    msg.addBlr(this._blr);
+
+    var self = this;
+
+    function cb(err, ret) {
+
+        if (err) {
+            doError(err, callback);
+            return;
+        }
+
+        self.dbhandle = ret.handle;
+        if (callback)
+            callback(undefined, ret);
+    }
+
+    // For reconnect
+    if (db) {
+        db.connection = this;
+        cb.response = db;
+    } else {
+        cb.response = new Database(this);
+        cb.response.removeAllListeners(&#x27;error&#x27;);
+        cb.response.on(&#x27;error&#x27;, noop);
+    }
+
+    this._queueEvent(cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+var Firebird = require(&#x27;node-firebird&#x27;);
+```
+
+### Methods
+
+- `Firebird.escape(value) -&#x3e; return {String}` - prevent for SQL Injections
+- `Firebird.<span class="apidocCodeKeywordSpan">attach</span>(options, function(err, db))` attach a database
+- `Firebird.create(options, function(err, db))` create a database
+- `Firebird.attachOrCreate(options, function(err, db))` attach or create database
+- `Firebird.pool(max, options, function(err, db)) -&#x3e; return {Object}` create a connection pooling
+
+## Connection types
+
+### Connection options
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.prototype.batchSegments" id="apidoc.element.node-firebird.Connection.prototype.batchSegments">
+        function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>batchSegments
+        <span class="apidocSignatureSpan">(blob, buffer, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">batchSegments = function (blob, buffer, callback){
+    var msg = this._msg;
+    var blr = this._blr;
+    msg.pos = 0;
+    blr.pos = 0;
+    msg.addInt(op_batch_segments);
+    msg.addInt(blob.handle);
+    msg.addInt(buffer.length + 2);
+    blr.addBuffer(buffer);
+    msg.addBlr(blr);
+    this._queueEvent(callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.prototype.closeBlob" id="apidoc.element.node-firebird.Connection.prototype.closeBlob">
+        function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>closeBlob
+        <span class="apidocSignatureSpan">(blob, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">closeBlob = function (blob, callback) {
+    var msg = this._msg;
+    msg.pos = 0;
+    msg.addInt(op_close_blob);
+    msg.addInt(blob.handle);
+    this._queueEvent(callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.prototype.closeStatement" id="apidoc.element.node-firebird.Connection.prototype.closeStatement">
+        function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>closeStatement
+        <span class="apidocSignatureSpan">(statement, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">closeStatement = function (statement, callback) {
+
+    if (this._isClosed)
+        return this.throwClosed(callback);
+
+    // for auto detach
+    this._pending.push(&#x27;closeStatement&#x27;);
+
+    var msg = this._msg;
+    msg.pos = 0;
+    msg.addInt(op_free_statement);
+    msg.addInt(statement.handle);
+    msg.addInt(DSQL_close);
+    this._queueEvent(callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.prototype.commit" id="apidoc.element.node-firebird.Connection.prototype.commit">
+        function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>commit
+        <span class="apidocSignatureSpan">(transaction, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">commit = function (transaction, callback) {
+
+    if (this._isClosed)
+        return this.throwClosed(callback);
+
+    // for auto detach
+    this._pending.push(&#x27;commit&#x27;);
+
+    var msg = this._msg;
+    msg.pos = 0;
+    msg.addInt(op_commit);
+    msg.addInt(transaction.handle);
+    this.db.emit(&#x27;commit&#x27;);
+    this._queueEvent(callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- `db.detach(function(err))` detach a database
+- `db.transaction(isolation, function(err, transaction))` create transaction
+
+### Transaction methods
+
+- `transaction.query(query, [params], function(err, result))` - classic query, returns Array of Object
+- `transaction.execute(query, [params], function(err, result))` - classic query, returns Array of Array
+- `transaction.<span class="apidocCodeKeywordSpan">commit</span>(function(err))` commit current transaction
+- `transaction.rollback(function(err))` rollback current transaction
+
+## Examples
+
+### PARAMETRIZED QUERIES
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.prototype.commitRetaining" id="apidoc.element.node-firebird.Connection.prototype.commitRetaining">
+        function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>commitRetaining
+        <span class="apidocSignatureSpan">(transaction, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">commitRetaining = function (transaction, callback) {
+
+    if (this._isClosed)
+        throw new Error(&#x27;Connection is closed.&#x27;);
+
+    // for auto detach
+    this._pending.push(&#x27;commitRetaining&#x27;);
+
+    var msg = this._msg;
+    msg.pos = 0;
+    msg.addInt(op_commit_retaining);
+    msg.addInt(transaction.handle);
+    this._queueEvent(callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.prototype.connect" id="apidoc.element.node-firebird.Connection.prototype.connect">
+        function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>connect
+        <span class="apidocSignatureSpan">(database, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">connect = function (database, callback) {
+
+    var msg = this._msg;
+    var blr = this._blr;
+
+    msg.pos = 0;
+    blr.pos = 0;
+
+    msg.addInt(op_connect);
+    msg.addInt(op_attach);
+    msg.addInt(CONNECT_VERSION2);
+    msg.addInt(ARCHITECTURE_GENERIC);
+    msg.addString(database || &#x27;&#x27;, DEFAULT_ENCODING);
+    msg.addInt(1);  // Protocol version understood count.
+
+    blr.addString(1, process.env[&#x27;USER&#x27;] || process.env[&#x27;USERNAME&#x27;] || &#x27;Unknown&#x27;, DEFAULT_ENCODING);
+    var hostname = os.hostname();
+    blr.addString(4, hostname, DEFAULT_ENCODING);
+    blr.addBytes([6, 0]);
+    msg.addBlr(this._blr);
+
+    msg.addInt(PROTOCOL_VERSION10);
+    msg.addInt(ARCHITECTURE_GENERIC);
+    msg.addInt(2);  // Min type
+    msg.addInt(3);  // Max type
+    msg.addInt(2);  // Preference weight
+
+    this._queueEvent(callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.prototype.createBlob2" id="apidoc.element.node-firebird.Connection.prototype.createBlob2">
+        function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>createBlob2
+        <span class="apidocSignatureSpan">(transaction, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createBlob2 = function (transaction, callback) {
+    var msg = this._msg;
+    msg.pos = 0;
+    msg.addInt(op_create_blob2);
+    msg.addInt(0);
+    msg.addInt(transaction.handle);
+    msg.addInt(0);
+    msg.addInt(0);
+    this._queueEvent(callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.prototype.createDatabase" id="apidoc.element.node-firebird.Connection.prototype.createDatabase">
+        function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>createDatabase
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createDatabase = function (options, callback) {
+
+    var database = options.database || options.filename;
+    var user = options.user || DEFAULT_USER;
+    var password = options.password || DEFAULT_PASSWORD;
+    var pageSize = options.pageSize || DEFAULT_PAGE_SIZE;
+    var role = options.role;
+    var blr = this._blr;
+
+    blr.pos = 0;
+    blr.addByte(1);
+    blr.addString(isc_dpb_set_db_charset, &#x27;UTF8&#x27;, DEFAULT_ENCODING);
+    blr.addString(isc_dpb_lc_ctype, &#x27;UTF8&#x27;, DEFAULT_ENCODING);
+    blr.addString(isc_dpb_user_name, user, DEFAULT_ENCODING);
+    blr.addString(isc_dpb_password, password, DEFAULT_ENCODING);
+
+    if (role)
+        blr.addString(isc_dpb_sql_role_name, role, DEFAULT_ENCODING);
+
+    blr.addNumeric(isc_dpb_sql_dialect, 3);
+    blr.addNumeric(isc_dpb_force_write, 1);
+    blr.addNumeric(isc_dpb_overwrite, 1);
+    blr.addNumeric(isc_dpb_page_size, pageSize);
+
+    var msg = this._msg;
+    msg.pos = 0;
+    msg.addInt(op_create);  // op_create
+    msg.addInt(0);          // Database Object ID
+    msg.addString(database, DEFAULT_ENCODING);
+    msg.addBlr(blr);
+
+    var self = this;
+
+    function cb(err, ret) {
+
+        if (ret)
+            self.dbhandle = ret.handle;
+
+        setImmediate(function() {
+            if (self.db)
+                self.db.emit(&#x27;attach&#x27;, ret);
+        });
+
+        if (callback)
+            callback(err, ret);
+    }
+
+    cb.response = new Database(this);
+    this._queueEvent(cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.prototype.detach" id="apidoc.element.node-firebird.Connection.prototype.detach">
+        function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>detach
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">detach = function (callback) {
+
+    var self = this;
+
+    if (self._isClosed)
+        return;
+
+    self._isUsed = false;
+    self._isDetach = true;
+
+    var msg = self._msg;
+
+    msg.pos = 0;
+    msg.addInt(op_detach);
+    msg.addInt(0); // Database Object ID
+
+    self._queueEvent(function(err, ret) {
+        delete(self.dbhandle);
+        if (callback)
+            callback(err, ret);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- added auto-reconnect
+- added [sequentially selects](https://github.com/hgourvest/node-firebird/wiki/What-is-sequentially-selects)
+- events for connection (attach, detach, row, result, transaction, commit, rollback, error, etc.)
+- performance improvements
+- supports inserting/updating buffers and streams
+- reading blobs (sequentially)
+- pooling
+- `database.<span class="apidocCodeKeywordSpan">detach</span>()` waits for last command
+- better unit-test
+- best of use with [total.js - web application framework for node.js](http://www.totaljs.com)
+
+---
+
+- [Firebird documentation](http://www.firebirdsql.org/en/documentation/)
+- [Firebird limits and data types](http://www.firebirdsql.org/en/firebird-technical-specifications/)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.prototype.disconnect" id="apidoc.element.node-firebird.Connection.prototype.disconnect">
+        function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>disconnect
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">disconnect = function () {
+    this._socket.end();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.prototype.dropStatement" id="apidoc.element.node-firebird.Connection.prototype.dropStatement">
+        function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>dropStatement
+        <span class="apidocSignatureSpan">(statement, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dropStatement = function (statement, callback) {
+
+    if (this._isClosed)
+        return this.throwClosed(callback);
+
+    // for auto detach
+    this._pending.push(&#x27;dropStatement&#x27;);
+
+    var msg = this._msg;
+    msg.pos = 0;
+    msg.addInt(op_free_statement);
+    msg.addInt(statement.handle);
+    msg.addInt(DSQL_drop);
+    this._queueEvent(callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.prototype.executeStatement" id="apidoc.element.node-firebird.Connection.prototype.executeStatement">
+        function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>executeStatement
+        <span class="apidocSignatureSpan">(transaction, statement, params, callback, custom)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">executeStatement = function (transaction, statement, params, callback, custom) {
+
+    if (this._isClosed)
+        return this.throwClosed(callback);
+
+    // for auto detach
+    this._pending.push(&#x27;executeStatement&#x27;);
+
+    if (params instanceof Function) {
+        callback = params;
+        params = undefined;
+    }
+
+    var self = this;
+
+    function PrepareParams(params, input, callback) {
+
+        var value, meta;
+        var ret = new Array(params.length);
+        var wait = params.length;
+
+        function done() {
+            wait--;
+            if (wait === 0)
+                callback(ret);
+        }
+
+        function putBlobData(index, value, callback) {
+
+            self.createBlob2(transaction, function(err, blob) {
+
+                var b;
+                var isStream = value.readable;
+
+                if (Buffer.isBuffer(value))
+                    b = value;
+                else if (typeof(value) === &#x27;string&#x27;)
+                    b = new Buffer(value, DEFAULT_ENCODING)
+                else if (!isStream)
+                    b = new Buffer(JSON.stringify(value), DEFAULT_ENCODING)
+
+                if (Buffer.isBuffer(b)) {
+                    bufferReader(b, 1024, function(b, next) {
+                        self.batchSegments(blob, b, next);
+                    }, function() {
+                        ret[index] = new SQLParamQuad(blob.oid);
+                        self.closeBlob(blob, callback);
+                    });
+                    return;
+                }
+
+                var isReading = false;
+                var isEnd = false;
+
+                value.on(&#x27;data&#x27;, function(chunk) {
+                    value.pause();
+                    isReading = true;
+                    bufferReader(chunk, 1024, function(b, next) {
+                        self.batchSegments(blob, b, next);
+                    }, function() {
+                        isReading = false;
+
+                        if (isEnd) {
+                            ret[index] = new SQLParamQuad(blob.oid);
+                            self.closeBlob(blob, callback);
+                        } else
+                            value.resume();
+                    });
+                });
+
+                value.on(&#x27;end&#x27;, function() {
+                    isEnd = true;
+                    if (isReading)
+                        return;
+                    ret[index] = new SQLParamQuad(blob.oid);
+                    self.closeBlob(blob, callback);
+                });
+            });
+        }
+
+        for (var i = 0, length = params.length; i &#x3c; length; i++) {
+            value = params[i];
+            meta = input[i];
+
+            if (value === null || value === undefined) {
+                switch (meta.type) {
+                    case SQL_VARYING:
+                    case SQL_NULL:
+                    case SQL_TEXT:
+                        ret[i] = new SQLParamString(null);
+                        break;
+                    case SQL_DOUBLE:
+                    case SQL_FLOAT:
+                    case SQL_D_FLOAT:
+                        ret[i] = new SQLParamDouble(null);
+                        break;
+                    case SQL_TYPE_DATE:
+                    case SQL_TYPE_TIME:
+                    case SQL_TIMESTAMP:
+                        ret[i] = new SQLParamDate(null);
+                        break;
+                    case SQL_BLOB:
+                    case SQL_ARRAY:
+                    case SQL_QUAD:
+                        ret[i] = new SQLParamQuad(null);
+                        break;
+                    case SQL_LONG:
+                    case SQL_SHORT:
+                    case SQL_INT64:
+                    case SQL_BOOLEAN:
+                        ret[i] = new SQLParamInt(null);
+                        break;
+                    default:
+                        ret[i] = null;
+                }
+                done();
+            } else {
+                switch (meta.type) {
+                    case SQL_BLOB:
+                        putBlobData(i, value, done);
+                        break;
+
+                    case SQL_TIMESTAMP:
+                    case SQL_TYPE_DAT ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.prototype.fetch" id="apidoc.element.node-firebird.Connection.prototype.fetch">
+        function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>fetch
+        <span class="apidocSignatureSpan">(statement, transaction, count, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fetch = function (statement, transaction, count, callback) {
+
+    var msg = this._msg;
+    var blr = this._blr;
+
+    msg.pos = 0;
+    blr.pos = 0;
+
+    if (count instanceof Function) {
+        callback = count;
+        count = DEFAULT_FETCHSIZE;
+    }
+
+    msg.addInt(op_fetch);
+    msg.addInt(statement.handle);
+    CalcBlr(blr, statement.output);
+    msg.addBlr(blr);
+    msg.addInt(0); // message number
+    msg.addInt(count || DEFAULT_FETCHSIZE); // fetch count
+
+    if (!transaction) {
+        callback.statement = statement;
+        this._queueEvent(callback);
+        return;
+    }
+
+    callback.statement = statement;
+    this._queueEvent(callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.prototype.fetchAll" id="apidoc.element.node-firebird.Connection.prototype.fetchAll">
+        function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>fetchAll
+        <span class="apidocSignatureSpan">(statement, transaction, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fetchAll = function (statement, transaction, callback) {
+
+    var self = this;
+    var data;
+    var loop = function(err, ret) {
+
+        if (err) {
+            callback(err);
+            return;
+        }
+
+        if (!data) {
+            data = ret.data;
+        } else {
+            for (var i = 0, length = ret.data.length; i &#x3c; length; i++)
+                data.push(ret.data[i]);
+        }
+
+        if (ret.fetched)
+            callback(undefined, data);
+        else
+            self.fetch(statement, transaction, DEFAULT_FETCHSIZE, loop);
+    }
+
+    this.fetch(statement, transaction, DEFAULT_FETCHSIZE, loop);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.prototype.getCachedQuery" id="apidoc.element.node-firebird.Connection.prototype.getCachedQuery">
+        function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>getCachedQuery
+        <span class="apidocSignatureSpan">(query)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getCachedQuery = function (query) {
+    if (this._cache_query)
+        return this._cache_query[query];
+    return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.prototype.getSegment" id="apidoc.element.node-firebird.Connection.prototype.getSegment">
+        function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>getSegment
+        <span class="apidocSignatureSpan">(blob, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getSegment = function (blob, callback) {
+    var msg = this._msg;
+    msg.pos = 0;
+    msg.addInt(op_get_segment);
+    msg.addInt(blob.handle);
+    msg.addInt(1024); // buffer length
+    msg.addInt(0); // ???
+    this._queueEvent(callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.prototype.openBlob" id="apidoc.element.node-firebird.Connection.prototype.openBlob">
+        function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>openBlob
+        <span class="apidocSignatureSpan">(blob, transaction, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">openBlob = function (blob, transaction, callback) {
+    var msg = this._msg;
+    msg.pos = 0;
+    msg.addInt(op_open_blob);
+    msg.addInt(transaction.handle);
+    msg.addQuad(blob);
+    this._queueEvent(callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.prototype.prepareStatement" id="apidoc.element.node-firebird.Connection.prototype.prepareStatement">
+        function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>prepareStatement
+        <span class="apidocSignatureSpan">(transaction, statement, query, plan, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">prepareStatement = function (transaction, statement, query, plan, callback) {
+
+    if (this._isClosed)
+        return this.throwClosed(callback);
+
+    var msg = this._msg;
+    var blr = this._blr;
+
+    msg.pos = 0;
+    blr.pos = 0;
+
+    if (plan instanceof Function) {
+        callback = plan;
+        plan = false;
+    }
+
+    blr.addBytes(DESCRIBE);
+
+    if (plan)
+        blr.addByte(isc_info_sql_get_plan);
+
+    msg.addInt(op_prepare_statement);
+    msg.addInt(transaction.handle);
+    msg.addInt(statement.handle);
+    msg.addInt(3); // dialect = 3
+    msg.addString(query, DEFAULT_ENCODING);
+    msg.addBlr(blr);
+    msg.addInt(65535); // buffer_length
+
+    var self = this;
+
+    this._queueEvent(function(err, ret) {
+
+        if (!err) {
+            describe(ret, statement);
+            statement.query = query;
+            self.db.emit(&#x27;query&#x27;, query);
+            ret = statement;
+            self._setcachedquery(query, ret);
+        }
+
+        if (callback)
+            callback(err, ret);
+    });
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.prototype.rollback" id="apidoc.element.node-firebird.Connection.prototype.rollback">
+        function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>rollback
+        <span class="apidocSignatureSpan">(transaction, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rollback = function (transaction, callback) {
+
+    if (this._isClosed)
+        return this.throwClosed(callback);
+
+    // for auto detach
+    this._pending.push(&#x27;rollback&#x27;);
+
+    var msg = this._msg;
+    msg.pos = 0;
+    msg.addInt(op_rollback);
+    msg.addInt(transaction.handle);
+    this.db.emit(&#x27;rollback&#x27;);
+    this._queueEvent(callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- `db.transaction(isolation, function(err, transaction))` create transaction
+
+### Transaction methods
+
+- `transaction.query(query, [params], function(err, result))` - classic query, returns Array of Object
+- `transaction.execute(query, [params], function(err, result))` - classic query, returns Array of Array
+- `transaction.commit(function(err))` commit current transaction
+- `transaction.<span class="apidocCodeKeywordSpan">rollback</span>(function(err))` rollback current transaction
+
+## Examples
+
+### PARAMETRIZED QUERIES
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.prototype.rollbackRetaining" id="apidoc.element.node-firebird.Connection.prototype.rollbackRetaining">
+        function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>rollbackRetaining
+        <span class="apidocSignatureSpan">(transaction, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rollbackRetaining = function (transaction, callback) {
+
+    if (this._isClosed)
+        return this.throwClosed(callback);
+
+    // for auto detach
+    this._pending.push(&#x27;rollbackRetaining&#x27;);
+
+    var msg = this._msg;
+    msg.pos = 0;
+    msg.addInt(op_rollback_retaining);
+    msg.addInt(transaction.handle);
+    this._queueEvent(callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.prototype.startTransaction" id="apidoc.element.node-firebird.Connection.prototype.startTransaction">
+        function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>startTransaction
+        <span class="apidocSignatureSpan">(isolation, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">startTransaction = function (isolation, callback) {
+
+    if (typeof(isolation) === &#x27;function&#x27;) {
+        var tmp = isolation;
+        isolation = callback;
+        callback = tmp;
+    }
+
+    if (this._isClosed)
+        return this.throwClosed(callback);
+
+    // for auto detach
+    this._pending.push(&#x27;startTransaction&#x27;);
+
+    var blr = this._blr;
+    var msg = this._msg;
+
+    blr.pos = 0;
+    msg.pos = 0;
+
+    if (isolation instanceof Function) {
+        callback = isolation;
+        isolation = null;
+    }
+
+    blr.addBytes(isolation || ISOLATION_REPEATABLE_READ);
+    msg.addInt(op_transaction);
+    msg.addInt(this.dbhandle);
+    msg.addBlr(blr);
+    callback.response = new Transaction(this);
+
+    this.db.emit(&#x27;transaction&#x27;, isolation);
+    this._queueEvent(callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.prototype.svcattach" id="apidoc.element.node-firebird.Connection.prototype.svcattach">
+        function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>svcattach
+        <span class="apidocSignatureSpan">(options, callback, svc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">svcattach = function (options, callback, svc) {
+    this._lowercase_keys = options.lowercase_keys || DEFAULT_LOWERCASE_KEYS;
+    var database = options.database || options.filename;
+    var user = options.user || DEFAULT_USER;
+    var password = options.password || DEFAULT_PASSWORD;
+    var role = options.role;
+    var self = this;
+    var msg = this._msg;
+    var blr = this._blr;
+    msg.pos = 0;
+    blr.pos = 0;
+
+    blr.addBytes([isc_dpb_version2, isc_dpb_version2]);
+    blr.addString(isc_dpb_lc_ctype, &#x27;UTF8&#x27;, DEFAULT_ENCODING);
+    blr.addString(isc_dpb_user_name, user, DEFAULT_ENCODING);
+    blr.addString(isc_dpb_password, password, DEFAULT_ENCODING);
+    blr.addByte(isc_dpb_dummy_packet_interval);
+    blr.addByte(4);
+    blr.addBytes([120, 10, 0, 0]); // FROM DOT NET PROVIDER
+    if (role)
+        blr.addString(isc_dpb_sql_role_name, role, DEFAULT_ENCODING);
+
+    msg.addInt(op_service_attach);
+    msg.addInt(0);
+    msg.addString(DEFAULT_SVC_NAME, DEFAULT_ENCODING); // only local for moment
+    msg.addBlr(this._blr);
+
+    var self = this;
+
+    function cb(err, ret) {
+
+        if (err) {
+            doError(err, callback);
+            return;
+        }
+
+        self.svchandle = ret.handle;
+        if (callback)
+            callback(undefined, ret);
+    }
+
+    // For reconnect
+    if (svc) {
+        svc.connection = this;
+        cb.response = svc;
+    } else {
+        cb.response = new ServiceManager(this);
+        cb.response.removeAllListeners(&#x27;error&#x27;);
+        cb.response.on(&#x27;error&#x27;, noop);
+    }
+
+    this._queueEvent(cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.prototype.svcdetach" id="apidoc.element.node-firebird.Connection.prototype.svcdetach">
+        function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>svcdetach
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">svcdetach = function (callback) {
+    var self = this;
+
+    if (self._isClosed)
+        return;
+
+    self._isUsed = false;
+    self._isDetach = true;
+
+    var msg = self._msg;
+
+    msg.pos = 0;
+    msg.addInt(op_service_detach);
+    msg.addInt(this.svchandle); // Database Object ID
+
+    self._queueEvent(function (err, ret) {
+        delete (self.svchandle);
+        if (callback)
+            callback(err, ret);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.prototype.svcquery" id="apidoc.element.node-firebird.Connection.prototype.svcquery">
+        function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>svcquery
+        <span class="apidocSignatureSpan">(spbquery, resultbuffersize, timeout, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">svcquery = function (spbquery, resultbuffersize, timeout, callback) {
+    if (resultbuffersize &#x3e; MAX_BUFFER_SIZE) {
+        doError(new Error(&#x27;Buffer is too big&#x27;), callback);
+        return;
+    }
+
+    var msg = this._msg;
+    var blr = this._blr;
+    msg.pos = 0;
+    blr.pos = 0;
+    blr.addByte(isc_spb_current_version);
+    //blr.addByteInt32(isc_info_svc_timeout, timeout);
+    msg.addInt(op_service_info);
+    msg.addInt(this.svchandle);
+    msg.addInt(0)
+    msg.addBlr(blr);
+    blr.pos = 0
+    blr.addBytes(spbquery);
+    msg.addBlr(blr);
+    msg.addInt(resultbuffersize);
+    this._queueEvent(callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.prototype.svcstart" id="apidoc.element.node-firebird.Connection.prototype.svcstart">
+        function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>svcstart
+        <span class="apidocSignatureSpan">(spbaction, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">svcstart = function (spbaction, callback) {
+    var msg = this._msg;
+    var blr = this._blr;
+    msg.pos = 0;
+    msg.addInt(op_service_start);
+    msg.addInt(this.svchandle);
+    msg.addInt(0)
+    msg.addBlr(spbaction);
+    this._queueEvent(callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-firebird.Connection.prototype.throwClosed" id="apidoc.element.node-firebird.Connection.prototype.throwClosed">
+        function <span class="apidocSignatureSpan">node-firebird.Connection.prototype.</span>throwClosed
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">throwClosed = function (callback) {
+    var err = new Error(&#x27;Connection is closed.&#x27;);
+    this.db.emit(&#x27;error&#x27;, err);
+    if (callback)
+        callback(err);
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
